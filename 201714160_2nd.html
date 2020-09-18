@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="201714160_2nd.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="201714160_2nd.js"></script>
+        <title>양치를 합시다</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="400" height="600"></canvas>
+        <div id="game-init"></div>
+        <button class="gameButton" onclick="gameSet()" id="gamebtn">게임입장</button>
+        <div id="game-setting">
+            <div class="germ-setting">
+                충치 세균 색깔
+                <br/>
+                <div class="setting-img" id="germ-blue" onclick="bingo_germ('germ-blue')">
+                    <img src="./germ-blue.png" width="80px" style="margin-right: 25px;">
+                </div>
+                <div class="setting-img" id="germ-green" onclick="bingo_germ('germ-green')">
+                    <img src="./germ-green.png" width="80px" style="margin-right: 25px;">
+                </div>
+                <div class="setting-img" id="germ-purple" onclick="bingo_germ('germ-purple')">
+                    <img src="./germ-purple.png" width="80px" style="margin-right: 25px;">
+                </div>
+            </div>
+            <div class="play-setting">
+                난이도
+                <br/>
+                <div class="scale-img" id="easy" onclick="bingo_scale('easy')">
+                    <img src="./easy.jpg" width="60px" style="margin-right: 25px;">
+                </div>
+                <div class="scale-img" id="medium" onclick="bingo_scale('medium')">
+                    <img src="./medium.jpg" width="60px" style="margin-right: 25px;">
+                </div>
+                <div class="scale-img" id="hard" onclick="bingo_scale('hard')">
+                    <img src="./hard.jpg" width="60px" style="margin-right: 25px;">
+                </div>
+            </div>
+            <div class="brush-setting">
+                칫솔 색깔
+                <br/>
+                <div class="brush-setting-img" id="brush-blue" onclick="bingo_brush('brush-blue')">
+                    <img src="./brush_blue.png" width="100px">
+                </div>
+                <div class="brush-setting-img" id="brush-pink" onclick="bingo_brush('brush-pink')">
+                    <img src="./brush_pink.png" width="100px">
+                </div>
+                <div class="brush-setting-img" id="brush-yellow" onclick="bingo_brush('brush-yellow')">
+                    <img src="./brush_yellow.png" width="100px">
+                </div>
+            </div>
+        </div>
+        <div id="game-fail"></div>
+        <div id="game-success"></div>
+        <button class="gameButton" onclick="startGame()" id="startBtn">게임시작</button>
+        <div id="score-box">
+            <div id="score">점수 0점</div>
+        </div>
+    </body>
+</html>
